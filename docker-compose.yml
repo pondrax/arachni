@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  web:
+    image: drax/arachni
+    build: .
+    user: arachni
+    ports:
+      - "9292:9292"
+    command: /arachni/bin/arachni_web -o 0.0.0.0
